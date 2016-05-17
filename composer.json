@@ -1,5 +1,5 @@
 {
-    "name": "kzykhys/git",
+    "name": "tomk79/phpgit",
     "description": "A Git wrapper for PHP5.3+",
     "license": "MIT",
     "minimum-stability": "stable",
@@ -7,6 +7,10 @@
         {
             "name": "Kazuyuki Hayashi",
             "email": "hayashi@valnur.net"
+        },
+        {
+            "name": "Tomoya Koyanagi",
+            "email": "tom_k79@hotmail.com"
         }
     ],
     "require": {
@@ -20,11 +24,6 @@
     "autoload": {
         "psr-0": {
             "": "src"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
         }
     }
 }
