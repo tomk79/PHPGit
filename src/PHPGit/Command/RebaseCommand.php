@@ -121,9 +121,10 @@ class RebaseCommand extends Command
             'force-rebase' => false
         ));
 
-        $resolver->setAllowedTypes(array(
-            'onto' => array('null', 'string')
-        ));
+        $resolver->setAllowedTypes(
+            'onto',
+            array('null', 'string')
+        );
     }
 
-} 
+}

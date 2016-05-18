@@ -82,15 +82,20 @@ class ArchiveCommand extends Command
             'prefix' => null
         ));
 
-        $resolver->setAllowedTypes(array(
-            'format' => array('null', 'string'),
-            'prefix' => array('null', 'string')
-        ));
+        $resolver->setAllowedTypes(
+            'format',
+            array('null', 'string')
+        );
+        $resolver->setAllowedTypes(
+            'prefix',
+            array('null', 'string')
+        );
 
-        $resolver->setAllowedValues(array(
-            'format' => array('tar', 'zip')
-        ));
+        $resolver->setAllowedValues(
+            'format',
+            array('tar', 'zip')
+        );
     }
 
 
-} 
+}

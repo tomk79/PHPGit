@@ -62,9 +62,10 @@ class ShowCommand extends Command
             'abbrev-commit' => false
         ));
 
-        $resolver->setAllowedTypes(array(
-            'format' => array('null', 'string'),
-        ));
+        $resolver->setAllowedTypes(
+            'format',
+            array('null', 'string')
+        );
     }
 
 }
