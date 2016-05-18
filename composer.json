@@ -2,6 +2,11 @@
     "name": "tomk79/phpgit",
     "description": "A Git wrapper for PHP5.3+",
     "license": "MIT",
+    "scripts":{
+        "test": [
+            "php ./vendor/phpunit/phpunit/phpunit"
+        ]
+    } ,
     "minimum-stability": "stable",
     "authors": [
         {
@@ -19,7 +24,8 @@
         "symfony/options-resolver": ">=2.3"
     },
     "require-dev": {
-        "symfony/filesystem": ">=2.3"
+        "symfony/filesystem": ">=2.3",
+        "phpunit/phpunit": "^4.8"
     },
     "autoload": {
         "psr-0": {
