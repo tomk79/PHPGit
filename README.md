@@ -1,10 +1,7 @@
 PHPGit - A Git wrapper for PHP5.3+
 ==================================
 
-[![Latest Unstable Version](https://poser.pugx.org/kzykhys/git/v/unstable.png)](https://packagist.org/packages/kzykhys/git)
-[![Build Status](https://travis-ci.org/kzykhys/PHPGit.png?branch=master)](https://travis-ci.org/kzykhys/PHPGit)
-[![Coverage Status](https://coveralls.io/repos/kzykhys/PHPGit/badge.png)](https://coveralls.io/r/kzykhys/PHPGit)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/04f10b57-a113-47ad-8dda-9a6dacbb079f/mini.png)](https://insight.sensiolabs.com/projects/04f10b57-a113-47ad-8dda-9a6dacbb079f)
+`tomk79/phpgit` は、 `kzykhys/git` を fork して変更を加えているものです。
 
 Requirements
 ------------
@@ -20,7 +17,7 @@ Update your composer.json and run `composer update`
 ``` json
 {
     "require": {
-        "kzykhys/git": "dev-master"
+        "tomk79/phpgit": "dev-master"
     }
 }
 ```
