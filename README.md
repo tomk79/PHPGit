@@ -324,6 +324,20 @@ $git->checkout('develop');
 - **force** (_boolean_) Proceed even if the index or the working tree differs from HEAD
 - **merge** (_boolean_) Merges local modification
 
+#### $git->checkout->rollback(_string_ $hash, _string_ $path, _array_ $options = [])
+
+Create a new branch and checkout
+
+``` php
+$git = new PHPGit\Git();
+$git->setRepository('/path/to/repo');
+$git->checkout->rollback('HEAD',array('path'=>'path/to/rollback/'));
+```
+
+##### Options
+
+- **force** (_boolean_) Proceed even if the index or the working tree differs from HEAD
+
 #### $git->checkout->create(_string_ $branch, _string_ $startPoint = null, _array_ $options = [])
 
 Create a new branch and checkout

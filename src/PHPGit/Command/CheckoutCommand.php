@@ -49,6 +49,46 @@ class CheckoutCommand extends Command
     }
 
     /**
+     * Rollback files from hash
+     *
+     * ``` php
+     * $git = new PHPGit\Git();
+     * $git->setRepository('/path/to/repo');
+     * $git->checkout->rollback('HEAD','path/to/rollback/');
+     * ```
+     *
+     * ##### Options
+     *
+     * - **force** (_boolean_) Proceed even if the index or the working tree differs from HEAD
+     *
+     * @param string $hash       rollback from commit
+     * @param string $path       Path to rollback target
+     * @param array  $options    [optional] An array of options {@see CheckoutCommand::setDefaultOptions}
+     *
+     * @throws GitException
+     * @return bool
+     */
+    public function rollback($hash, $path, array $options = array())
+    {
+        $options = $this->resolve($options);
+        $builder = $this->git->getProcessBuilder()
+            ->add('checkout')
+        ;
+
+        $this->addFlags($builder, $options, array('force', 'merge'));
+
+        $builder
+            ->add($hash)
+            ->add('--')
+            ->add($path)
+        ;
+
+        $this->git->run($builder->getProcess());
+
+        return true;
+    }
+
+    /**
      * Create a new branch and checkout
      *
      * ``` php
