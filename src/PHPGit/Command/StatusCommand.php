@@ -140,7 +140,8 @@ class StatusCommand extends Command
     public function setDefaultOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'ignored' => false
+            'ignored' => false,
+            'untracked-files' => false
         ));
     }
 
